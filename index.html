@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='UTF-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Counter App</title>
+		<style>
+* {
+	font-family: verdana;
+	margin: 0;
+	padding: 0;
+}
+
+#btn1 {
+	width: 200px;
+}
+
+#btn2 {
+	width: 150px;
+}
+
+button {
+	background: #000;
+	border: 1px solid #000;
+	border-radius: 3px;
+	color: #fff;
+	font-weight: bold;
+	margin: 5px;
+	padding: 10px;
+}
+
+button:hover {
+	background: #000;
+	border: 1px solid #000;
+	border-radius: 3px;
+	color: #fff;
+	cursor: cell;
+	font-size: 20px;
+	font-weight: bold;
+	margin: 5px;
+	padding: 10px;
+	transition: 1.5s;
+}
+
+div {
+	background-color: #cfefef; 
+	box-shadow: 15px 25px 50px black;
+	display: inline-block;
+	height: 400px;
+	margin-top: 6cm;
+	padding: 20px;
+	width: 600px;
+}
+
+h1, h2, p {
+	text-align: center;
+}
+
+h2 {
+	font-size: 10rem;
+}
+
+		</style>
+</head>
+
+<center>
+<body>
+
+<div id='wrapper'>
+	<h1>People Entered:</h1>
+	<h2>0</h2>
+		<span id='btn'>
+			<button onclick='add()' id='btn1'>INCREMENT</button>
+<br>
+			<button onclick='save()' id='btn2'>SAVE</button>
+		</span> 
+<br>
+<br>
+		<p>Previous Entries: <span id='total'></span> </p> 
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+		
+
+<script>
+let number = 0;
+function add() {
+	let record = document.querySelector('h2').textContent 
+		   = number += 1;
+}
+
+function save() {
+	document.querySelector('p span').textContent 
+		= document.querySelector('h2').textContent;
+	document.querySelector('h2').textContent 
+		= number = 0; 
+	let element = document.createElement('p');
+	element.textContent = document.querySelector('p span').textContent; 
+	document.body.appendChild(element);
+}
+  
+</script>
+</body>
+</center>
+
+</html>
